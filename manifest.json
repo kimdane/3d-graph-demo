@@ -1,0 +1,17 @@
+{
+  "engines": {
+    "arangodb": "^3.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "setup": "scripts/setup.js"
+  },
+  "files": {
+    "/icons": "icons",
+    "/css": "css",
+    "/js": {"path": "js", "type": "application/javascript"}
+  },
+  "host_permissions": [
+    "http://127.0.0.1:8529/_db/_system/getting-started/js/"
+  ]
+}
