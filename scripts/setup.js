@@ -1,9 +1,11 @@
 'use strict';
 const db = require('@arangodb').db;
 const graphModule = require('@arangodb/general-graph');
+const request = require('@arangodb/request');
 
 const stixCapecRecords = require('./stix-capec.json').objects;
 const enterpriseAttackRecords = require('./enterprise-attack.json').objects;
+const alpineDemo = require('./alpine.json').objects;
 
 const documentCollections = [
   "securityScan",
@@ -158,4 +160,6 @@ try {
   console.error(`Had error with ${error}`);
 }
 
- console.log(`Using ${stixCollections.length} collections and created ${created}, and updated ${updated} of total ${created+updated} records.`);
+console.log(`Using ${stixCollections.length} collections and created ${created}, and updated ${updated} of total ${created+updated} records.`);
+
+request.post('http://localhost:8529/_db/demo/demo/syft-grype-scan', {json: true, body: alpineDemo})
