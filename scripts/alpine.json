@@ -1,0 +1,564 @@
+{
+ "matches": [
+  {
+   "vulnerability": {
+    "id": "CVE-2022-2068",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-2068",
+    "namespace": "nvd:cpe",
+    "severity": "Critical",
+    "urls": [
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9639817dac8bbbaa64d09efad7464ccc405527c7",
+     "https://www.openssl.org/news/secadv/20220621.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=7a9c027159fe9e1bbc2cd38a8a2914bff0d5abd9",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2c9c35870601b4a44d86ddbf512b38df38285cfa",
+     "https://www.debian.org/security/2022/dsa-5169",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6WZZBKUHQFGSKGNXXKICSRPL7AMVW5M5/",
+     "https://security.netapp.com/advisory/ntap-20220707-0008/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VCMNWKERPBKOEBNL7CLTTX3ZZCZLH7XA/"
+    ],
+    "description": "In addition to the c_rehash shell command injection identified in CVE-2022-1292, further circumstances where the c_rehash script does not properly sanitise shell metacharacters to prevent command injection were found by code review. When the CVE-2022-1292 was fixed it was not discovered that there are other places in the script where the file names of certificates being hashed were possibly passed to a command executed through the shell. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.4 (Affected 3.0.0,3.0.1,3.0.2,3.0.3). Fixed in OpenSSL 1.1.1p (Affected 1.1.1-1.1.1o). Fixed in OpenSSL 1.0.2zf (Affected 1.0.2-1.0.2ze).",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+      "metrics": {
+       "baseScore": 10,
+       "exploitabilityScore": 10,
+       "impactScore": 10
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 9.8,
+       "exploitabilityScore": 3.9,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [
+      "3.0.4",
+      "1.1.1p",
+      "1.0.2zf"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:1.1.1n-r0:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 3.0.0, < 3.0.4 || >= 1.1.1, < 1.1.1p || >= 1.0.2, < 1.0.2zf (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libcrypto1.1",
+    "version": "1.1.1n-r0",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "OpenSSL"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libcrypto1.1@1.1.1n-r0?arch=x86_64&upstream=openssl&distro=alpine-3.12.12",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-2068",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-2068",
+    "namespace": "nvd:cpe",
+    "severity": "Critical",
+    "urls": [
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=9639817dac8bbbaa64d09efad7464ccc405527c7",
+     "https://www.openssl.org/news/secadv/20220621.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=7a9c027159fe9e1bbc2cd38a8a2914bff0d5abd9",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2c9c35870601b4a44d86ddbf512b38df38285cfa",
+     "https://www.debian.org/security/2022/dsa-5169",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6WZZBKUHQFGSKGNXXKICSRPL7AMVW5M5/",
+     "https://security.netapp.com/advisory/ntap-20220707-0008/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VCMNWKERPBKOEBNL7CLTTX3ZZCZLH7XA/"
+    ],
+    "description": "In addition to the c_rehash shell command injection identified in CVE-2022-1292, further circumstances where the c_rehash script does not properly sanitise shell metacharacters to prevent command injection were found by code review. When the CVE-2022-1292 was fixed it was not discovered that there are other places in the script where the file names of certificates being hashed were possibly passed to a command executed through the shell. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.4 (Affected 3.0.0,3.0.1,3.0.2,3.0.3). Fixed in OpenSSL 1.1.1p (Affected 1.1.1-1.1.1o). Fixed in OpenSSL 1.0.2zf (Affected 1.0.2-1.0.2ze).",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+      "metrics": {
+       "baseScore": 10,
+       "exploitabilityScore": 10,
+       "impactScore": 10
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 9.8,
+       "exploitabilityScore": 3.9,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [
+      "3.0.4",
+      "1.1.1p",
+      "1.0.2zf"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:1.1.1n-r0:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 3.0.0, < 3.0.4 || >= 1.1.1, < 1.1.1p || >= 1.0.2, < 1.0.2zf (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libssl1.1",
+    "version": "1.1.1n-r0",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "OpenSSL"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libssl1.1:libssl1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libssl1.1@1.1.1n-r0?arch=x86_64&upstream=openssl&distro=alpine-3.12.12",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-2097",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-2097",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://www.openssl.org/news/secadv/20220705.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=a98f339ddd7e8f487d6e0088d4a9a42324885a93",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=919925673d6c9cfed3c1085497f5dfbbed5fc431",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/V6567JERRHHJW2GNGJGKDRNHR7SNPZK7/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/R6CK57NBQFTPUMXAPJURCGXUYT76NQAK/",
+     "https://security.netapp.com/advisory/ntap-20220715-0011/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VCMNWKERPBKOEBNL7CLTTX3ZZCZLH7XA/"
+    ],
+    "description": "AES OCB mode for 32-bit x86 platforms using the AES-NI assembly optimised implementation will not encrypt the entirety of the data under some circumstances. This could reveal sixteen bytes of data that was preexisting in the memory that wasn't written. In the special case of \"in place\" encryption, sixteen bytes of the plaintext would be revealed. Since OpenSSL does not support OCB based cipher suites for TLS and DTLS, they are both unaffected. Fixed in OpenSSL 3.0.5 (Affected 3.0.0-3.0.4). Fixed in OpenSSL 1.1.1q (Affected 1.1.1-1.1.1p).",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+      "metrics": {
+       "baseScore": 5,
+       "exploitabilityScore": 10,
+       "impactScore": 2.9
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "metrics": {
+       "baseScore": 7.5,
+       "exploitabilityScore": 3.9,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [
+      "1.1.1q",
+      "3.0.5"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:1.1.1n-r0:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 1.1.1, < 1.1.1q || >= 3.0.0, < 3.0.5 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libcrypto1.1",
+    "version": "1.1.1n-r0",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "OpenSSL"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libcrypto1.1@1.1.1n-r0?arch=x86_64&upstream=openssl&distro=alpine-3.12.12",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-2097",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-2097",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://www.openssl.org/news/secadv/20220705.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=a98f339ddd7e8f487d6e0088d4a9a42324885a93",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=919925673d6c9cfed3c1085497f5dfbbed5fc431",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/V6567JERRHHJW2GNGJGKDRNHR7SNPZK7/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/R6CK57NBQFTPUMXAPJURCGXUYT76NQAK/",
+     "https://security.netapp.com/advisory/ntap-20220715-0011/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VCMNWKERPBKOEBNL7CLTTX3ZZCZLH7XA/"
+    ],
+    "description": "AES OCB mode for 32-bit x86 platforms using the AES-NI assembly optimised implementation will not encrypt the entirety of the data under some circumstances. This could reveal sixteen bytes of data that was preexisting in the memory that wasn't written. In the special case of \"in place\" encryption, sixteen bytes of the plaintext would be revealed. Since OpenSSL does not support OCB based cipher suites for TLS and DTLS, they are both unaffected. Fixed in OpenSSL 3.0.5 (Affected 3.0.0-3.0.4). Fixed in OpenSSL 1.1.1q (Affected 1.1.1-1.1.1p).",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+      "metrics": {
+       "baseScore": 5,
+       "exploitabilityScore": 10,
+       "impactScore": 2.9
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "metrics": {
+       "baseScore": 7.5,
+       "exploitabilityScore": 3.9,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [
+      "1.1.1q",
+      "3.0.5"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:1.1.1n-r0:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 1.1.1, < 1.1.1q || >= 3.0.0, < 3.0.5 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libssl1.1",
+    "version": "1.1.1n-r0",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "OpenSSL"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libssl1.1:libssl1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libssl1.1@1.1.1n-r0?arch=x86_64&upstream=openssl&distro=alpine-3.12.12",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-37434",
+    "dataSource": "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434",
+    "namespace": "alpine:distro:alpine:3.12",
+    "severity": "Critical",
+    "urls": [
+     "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-37434"
+    ],
+    "cvss": [],
+    "fix": {
+     "versions": [
+      "1.2.12-r2"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2022-37434",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434",
+     "namespace": "nvd:cpe",
+     "severity": "Critical",
+     "urls": [
+      "https://github.com/nodejs/node/blob/75b68c6e4db515f76df73af476eccf382bbcb00a/deps/zlib/inflate.c#L762-L764",
+      "https://github.com/ivd38/zlib_overflow",
+      "https://github.com/madler/zlib/commit/eff308af425b67093bab25f80f1ae950166bece1",
+      "https://github.com/madler/zlib/blob/21767c654d31d2dccdde4330529775c6c5fd5389/zlib.h#L1062-L1063",
+      "http://www.openwall.com/lists/oss-security/2022/08/05/2",
+      "https://github.com/curl/curl/issues/9271",
+      "http://www.openwall.com/lists/oss-security/2022/08/09/1",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YRQAI7H4M4RQZ2IWZUEEXECBE5D56BH2/"
+     ],
+     "description": "zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).",
+     "cvss": [
+      {
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+       "metrics": {
+        "baseScore": 9.8,
+        "exploitabilityScore": 3.9,
+        "impactScore": 5.9
+       },
+       "vendorMetadata": {}
+      }
+     ]
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-direct-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "alpine",
+       "version": "3.12.12"
+      },
+      "namespace": "alpine:distro:alpine:3.12",
+      "package": {
+       "name": "zlib",
+       "version": "1.2.12-r0"
+      }
+     },
+     "found": {
+      "versionConstraint": "< 1.2.12-r2 (apk)"
+     }
+    }
+   ],
+   "artifact": {
+    "name": "zlib",
+    "version": "1.2.12-r0",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "Zlib"
+    ],
+    "cpes": [
+     "cpe:2.3:a:zlib:zlib:1.2.12-r0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/zlib@1.2.12-r0?arch=x86_64&upstream=zlib&distro=alpine-3.12.12",
+    "upstreams": [
+     {
+      "name": "zlib"
+     }
+    ]
+   }
+  }
+ ],
+ "source": {
+  "type": "image",
+  "target": {
+   "userInput": "alpine:3.12",
+   "imageID": "sha256:24c8ece58a1aa807c0d8ea121f91cee2efba99624d0a8aed732155fb31f28993",
+   "manifestDigest": "sha256:4cb54caa363ddb34e3118ec12d5c0cafb30ea04f0036dd9f0b527b178cdc0e7c",
+   "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+   "tags": [
+    "alpine:3.12"
+   ],
+   "imageSize": 5576689,
+   "layers": [
+    {
+     "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+     "digest": "sha256:1ad27bdd166b922492031b1938a4fb2f775e3d98c8f1b72051dad0570a4dd1b5",
+     "size": 5576689
+    }
+   ],
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoxNDcyLCJkaWdlc3QiOiJzaGEyNTY6MjRjOGVjZTU4YTFhYTgwN2MwZDhlYTEyMWY5MWNlZTJlZmJhOTk2MjRkMGE4YWVkNzMyMTU1ZmIzMWYyODk5MyJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo1ODY0OTYwLCJkaWdlc3QiOiJzaGEyNTY6MWFkMjdiZGQxNjZiOTIyNDkyMDMxYjE5MzhhNGZiMmY3NzVlM2Q5OGM4ZjFiNzIwNTFkYWQwNTcwYTRkZDFiNSJ9XX0=",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJIb3N0bmFtZSI6IiIsIkRvbWFpbm5hbWUiOiIiLCJVc2VyIjoiIiwiQXR0YWNoU3RkaW4iOmZhbHNlLCJBdHRhY2hTdGRvdXQiOmZhbHNlLCJBdHRhY2hTdGRlcnIiOmZhbHNlLCJUdHkiOmZhbHNlLCJPcGVuU3RkaW4iOmZhbHNlLCJTdGRpbk9uY2UiOmZhbHNlLCJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiQ21kIjpbIi9iaW4vc2giXSwiSW1hZ2UiOiJzaGEyNTY6ZTRjY2IzYjAwZGMyYTdhNjIwNTZmZGZkMWJlYWMxMzg3ZGJlOGExM2QxNjdjZGE0MTZiYTA2ZTIwYzMyMjNjNCIsIlZvbHVtZXMiOm51bGwsIldvcmtpbmdEaXIiOiIiLCJFbnRyeXBvaW50IjpudWxsLCJPbkJ1aWxkIjpudWxsLCJMYWJlbHMiOm51bGx9LCJjb250YWluZXIiOiJjZmE2YTliOGYwYTFhYzU5MWEyYWYzMjM3ODliNzhlYjE3OTNjYmIyMGNlNjkxNWQ0ZmViMTkyNjk0M2UyMWY2IiwiY29udGFpbmVyX2NvbmZpZyI6eyJIb3N0bmFtZSI6ImNmYTZhOWI4ZjBhMSIsIkRvbWFpbm5hbWUiOiIiLCJVc2VyIjoiIiwiQXR0YWNoU3RkaW4iOmZhbHNlLCJBdHRhY2hTdGRvdXQiOmZhbHNlLCJBdHRhY2hTdGRlcnIiOmZhbHNlLCJUdHkiOmZhbHNlLCJPcGVuU3RkaW4iOmZhbHNlLCJTdGRpbk9uY2UiOmZhbHNlLCJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiQ21kIjpbIi9iaW4vc2giLCItYyIsIiMobm9wKSAiLCJDTUQgW1wiL2Jpbi9zaFwiXSJdLCJJbWFnZSI6InNoYTI1NjplNGNjYjNiMDBkYzJhN2E2MjA1NmZkZmQxYmVhYzEzODdkYmU4YTEzZDE2N2NkYTQxNmJhMDZlMjBjMzIyM2M0IiwiVm9sdW1lcyI6bnVsbCwiV29ya2luZ0RpciI6IiIsIkVudHJ5cG9pbnQiOm51bGwsIk9uQnVpbGQiOm51bGwsIkxhYmVscyI6e319LCJjcmVhdGVkIjoiMjAyMi0wNC0wNVQwMDoyMDoxOS44MTE2OTkzNTZaIiwiZG9ja2VyX3ZlcnNpb24iOiIyMC4xMC4xMiIsImhpc3RvcnkiOlt7ImNyZWF0ZWQiOiIyMDIyLTA0LTA1VDAwOjIwOjE5LjcxNDg2MzUxOFoiLCJjcmVhdGVkX2J5IjoiL2Jpbi9zaCAtYyAjKG5vcCkgQUREIGZpbGU6YzFhYTg3YTNiNDY0ZmNhNjRkNzY5NDQ0YjUyMDFiYzA0MjZhMWY1MTdjOTFjNGE3OTE2MjcwZTEwZjhiMzAwYiBpbiAvICJ9LHsiY3JlYXRlZCI6IjIwMjItMDQtMDVUMDA6MjA6MTkuODExNjk5MzU2WiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSAgQ01EIFtcIi9iaW4vc2hcIl0iLCJlbXB0eV9sYXllciI6dHJ1ZX1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6MWFkMjdiZGQxNjZiOTIyNDkyMDMxYjE5MzhhNGZiMmY3NzVlM2Q5OGM4ZjFiNzIwNTFkYWQwNTcwYTRkZDFiNSJdfX0=",
+   "repoDigests": [
+    "alpine@sha256:c75ac27b49326926b803b9ed43bf088bc220d22556de1bc5f72d742c91398f69"
+   ],
+   "architecture": "amd64",
+   "os": "linux"
+  }
+ },
+ "distro": {
+  "name": "alpine",
+  "version": "3.12.12",
+  "idLike": []
+ },
+ "descriptor": {
+  "name": "grype",
+  "version": "0.48.0",
+  "configuration": {
+   "configPath": "",
+   "output": "json",
+   "file": "",
+   "distro": "",
+   "add-cpes-if-none": false,
+   "output-template-file": "",
+   "quiet": false,
+   "check-for-app-update": true,
+   "only-fixed": false,
+   "only-notfixed": false,
+   "platform": "",
+   "search": {
+    "scope": "Squashed",
+    "unindexed-archives": false,
+    "indexed-archives": true
+   },
+   "ignore": null,
+   "exclude": [],
+   "db": {
+    "cache-dir": "/home/ec2-user/.cache/grype/db",
+    "update-url": "https://toolbox-data.anchore.io/grype/databases/listing.json",
+    "ca-cert": "",
+    "auto-update": true,
+    "validate-by-hash-on-start": false,
+    "validate-age": true,
+    "max-allowed-built-age": 432000000000000
+   },
+   "externalSources": {
+    "enable": false,
+    "maven": {
+     "searchUpstreamBySha1": true,
+     "baseUrl": "https://search.maven.org/solrsearch/select"
+    }
+   },
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "fail-on-severity": "",
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "log": {
+    "structured": false,
+    "level": "",
+    "file": ""
+   },
+   "attestation": {
+    "public-key": "",
+    "skip-verification": false
+   }
+  },
+  "db": {
+   "built": "2022-08-25T08:17:54Z",
+   "schemaVersion": 4,
+   "location": "/home/ec2-user/.cache/grype/db/4",
+   "checksum": "sha256:4cfd92a540d4da7be1d676517e0608cdc6963ec58132f7e98bffbeb5d501164a",
+   "error": null
+  }
+ }
+}
